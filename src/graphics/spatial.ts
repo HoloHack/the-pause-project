@@ -321,7 +321,7 @@ export function createSpatialExperience(store: ExperienceStore): SpatialExperien
   configureQuality(activeQuality);
 
   return {
-    available: activeQuality !== 'static',
+    available: artifact !== null && particles !== null,
     destroy() {
       if (destroyed) return;
       destroyed = true;
